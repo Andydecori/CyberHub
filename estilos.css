@@ -1,0 +1,423 @@
+/* =========================================
+   VARIABLES DE COLOR (Tema Ciberseguridad)
+   ========================================= */
+:root {
+    --fondo-principal: #0d1117; /* Gris muy oscuro, casi negro */
+    --fondo-secundario: #161b22; /* Gris oscuro para tarjetas y menú */
+    --texto-principal: #c9d1d9; /* Gris claro para no cansar la vista */
+    --texto-titulos: #ffffff; /* Blanco puro para destacar encabezados */
+    --color-acento: #00ff41; /* Verde terminal clásico */
+    --color-acento-hover: #00cc33; /* Verde más oscuro para botones */
+    --borde-sutil: #30363d;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =========================================
+   RESET Y ESTILOS GLOBALES
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fondo-principal);
+    color: var(--texto-principal);
+    font-family: var(--fuente-principal);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el footer siempre quede abajo */
+}
+
+/* =========================================
+   CABECERA Y NAVEGACIÓN
+   ========================================= */
+.cabecera-global {
+    background-color: var(--fondo-secundario);
+    border-bottom: 1px solid var(--borde-sutil);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navegacion-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo strong {
+    color: var(--color-acento);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.menu-enlaces {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-enlaces a {
+    text-decoration: none;
+    color: var(--texto-principal);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.menu-enlaces a:hover,
+.menu-enlaces a.activo {
+    color: var(--color-acento);
+}
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+   ========================================= */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    flex-grow: 1; 
+}
+
+/* =========================================
+   SECCIÓN HERO (Inicio)
+   ========================================= */
+.seccion-hero {
+    text-align: center;
+    padding: 60px 0;
+    border-bottom: 1px solid var(--borde-sutil);
+    margin-bottom: 40px;
+}
+
+.titulo-destacado {
+    color: var(--texto-titulos);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.texto-hero {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    color: #8b949e;
+}
+
+.btn-primario {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-acento);
+    border: 2px solid var(--color-acento);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primario:hover {
+    background-color: var(--color-acento);
+    color: var(--fondo-principal);
+}
+
+/* =========================================
+   MÓDULOS (Tarjetas)
+   ========================================= */
+.subtitulo {
+    color: var(--texto-titulos);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.cuadricula-modulos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.tarjeta-modulo {
+    background-color: var(--fondo-secundario);
+    border: 1px solid var(--borde-sutil);
+    padding: 25px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tarjeta-modulo:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-acento);
+}
+
+.tarjeta-modulo h3 {
+    color: var(--texto-titulos);
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   PIE DE PÁGINA
+   ========================================= */
+.pie-pagina-global {
+    background-color: var(--fondo-secundario);
+    border-top: 1px solid var(--borde-sutil);
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    color: #8b949e;
+    font-size: 0.9rem;
+}
+/* =========================================
+   ESTILOS DEL SIMULADOR (Laboratorio)
+   ========================================= */
+.contenedor-simulador {
+    background-color: var(--fondo-secundario);
+    border: 1px solid var(--borde-sutil);
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.panel-entrada label, .panel-salida label {
+    display: block;
+    color: var(--color-acento);
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    background-color: var(--fondo-principal);
+    color: var(--texto-titulos);
+    border: 1px solid var(--borde-sutil);
+    border-radius: 5px;
+    padding: 15px;
+    font-family: monospace;
+    font-size: 1rem;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: var(--color-acento);
+}
+
+.controles {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.controles input[type="number"] {
+    background-color: var(--fondo-principal);
+    color: var(--texto-titulos);
+    border: 1px solid var(--borde-sutil);
+    border-radius: 5px;
+    padding: 10px;
+    width: 80px;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--texto-principal);
+    border: 2px solid var(--borde-sutil);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secundario:hover {
+    border-color: var(--texto-titulos);
+    color: var(--texto-titulos);
+}
+/* =========================================
+   ESTILOS DE LA PÁGINA DE CONTACTO
+   ========================================= */
+.contenedor-contacto {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--fondo-secundario);
+    border: 1px solid var(--borde-sutil);
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.caja-mailto {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.caja-mailto h3 {
+    color: var(--color-acento);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.caja-mailto p {
+    margin-bottom: 20px;
+    color: #8b949e;
+}
+
+.divisor-contacto {
+    border: 0;
+    height: 1px;
+    background-color: var(--borde-sutil);
+    margin: 30px 0;
+}
+
+.formulario-soporte {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-soporte label {
+    color: var(--color-acento);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.input-contacto {
+    width: 100%;
+    background-color: var(--fondo-principal);
+    color: var(--texto-titulos);
+    border: 1px solid var(--borde-sutil);
+    border-radius: 5px;
+    padding: 12px;
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-contacto:focus {
+    border-color: var(--color-acento);
+}
+
+.textarea-contacto {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.formulario-soporte .btn-secundario {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+/* =========================================
+   ESTILOS DE LA SECCIÓN DE AMENAZAS
+   ========================================= */
+.contenedor-amenazas {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.tarjeta-amenaza {
+    display: flex;
+    background-color: var(--fondo-secundario);
+    border: 1px solid var(--borde-sutil);
+    border-radius: 8px;
+    overflow: hidden;
+    align-items: center;
+}
+
+/* Invierte el orden de la imagen y el texto en tarjetas alternas */
+.tarjeta-amenaza.invertida {
+    flex-direction: row-reverse;
+}
+
+.amenaza-imagen {
+    flex: 1;
+    min-width: 300px; /* Asegura que la imagen no se encoja demasiado */
+}
+
+.amenaza-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-right: 1px solid var(--borde-sutil);
+}
+
+.tarjeta-amenaza.invertida .amenaza-imagen img {
+    border-right: none;
+    border-left: 1px solid var(--borde-sutil);
+}
+
+.amenaza-texto {
+    flex: 1;
+    padding: 30px;
+}
+
+.amenaza-texto h2 {
+    color: var(--color-acento);
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+/* Diseño responsivo para móviles */
+@media (max-width: 768px) {
+    .tarjeta-amenaza, .tarjeta-amenaza.invertida {
+        flex-direction: column;
+    }
+    .amenaza-imagen img {
+        border: none !important;
+        border-bottom: 1px solid var(--borde-sutil) !important;
+    }
+}
+/* =========================================
+   ESTILOS DE LA TABLA (Recursos)
+   ========================================= */
+.contenedor-tabla {
+    background-color: var(--fondo-secundario);
+    border: 1px solid var(--borde-sutil);
+    border-radius: 8px;
+    padding: 30px;
+    overflow-x: auto; /* Permite scroll horizontal si la pantalla es muy pequeña */
+}
+
+.tabla-glosario {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tabla-glosario th, .tabla-glosario td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--borde-sutil);
+}
+
+.tabla-glosario th {
+    background-color: var(--fondo-principal);
+    color: var(--color-acento);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.tabla-glosario tr:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.tabla-glosario td strong {
+    color: var(--texto-titulos);
+}

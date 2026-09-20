@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberHub | Laboratorio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- CABECERA UNIFICADA -->
+    <header class="cabecera-global">
+        <nav class="navegacion-principal">
+            <div class="logo">
+                <strong>CyberHub_</strong>
+            </div>
+            <ul class="menu-enlaces">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="amenazas.html">Amenazas</a></li>
+                <!-- Nota que la clase 'activo' ahora está en Laboratorio -->
+                <li><a href="laboratorio.html" class="activo">Laboratorio</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO DEL LABORATORIO -->
+    <main class="contenedor-principal">
+        
+        <section class="seccion-hero">
+            <h1 class="titulo-destacado">Simulador de Criptografía</h1>
+            <p class="texto-hero">
+                El Cifrado César es una técnica de sustitución simple. Ingresa un mensaje, elige un número de desplazamiento y observa cómo se altera la información para proteger su confidencialidad.
+            </p>
+        </section>
+
+        <!-- Interfaz del Simulador -->
+        <section class="contenedor-simulador">
+            <div class="panel-entrada">
+                <label for="mensajeOriginal">Mensaje original:</label>
+                <textarea id="mensajeOriginal" placeholder="Escribe aquí el texto a procesar..."></textarea>
+                
+                <div class="controles">
+                    <label for="desplazamiento">Desplazamiento (N):</label>
+                    <input type="number" id="desplazamiento" value="3" min="1" max="25">
+                    
+                    <button id="btnCifrar" class="btn-primario">Cifrar Mensaje</button>
+                    <button id="btnDescifrar" class="btn-secundario">Descifrar Mensaje</button>
+                </div>
+            </div>
+
+            <div class="panel-salida">
+                <label for="mensajeResultado">Resultado de la operación:</label>
+                <!-- Usamos 'readonly' para que el usuario no escriba aquí, solo lea el resultado -->
+                <textarea id="mensajeResultado" readonly placeholder="El texto procesado aparecerá aquí..."></textarea>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA UNIFICADO -->
+    <footer class="pie-pagina-global">
+        <p>&copy; 2026 CyberHub Académico | Desarrollado por Andrés Guerrero. Diseñado para el estudio seguro de sistemas.</p>
+    </footer>
+
+    <!-- CONEXIÓN CON TU LÓGICA -->
+    <script src="simulador.js"></script>
+</body>
+</html>

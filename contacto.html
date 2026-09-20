@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberHub | Contacto</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- CABECERA UNIFICADA -->
+    <header class="cabecera-global">
+        <nav class="navegacion-principal">
+            <div class="logo">
+                <strong>CyberHub_</strong>
+            </div>
+            <ul class="menu-enlaces">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="amenazas.html">Amenazas</a></li>
+                <li><a href="laboratorio.html">Laboratorio</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <!-- Clase 'activo' en Contacto -->
+                <li><a href="contacto.html" class="activo">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO DE CONTACTO -->
+    <main class="contenedor-principal">
+        
+        <section class="seccion-hero">
+            <h1 class="titulo-destacado">Soporte Técnico y Consultas</h1>
+            <p class="texto-hero">
+                ¿Tienes alguna duda sobre las prácticas del laboratorio o deseas reportar una vulnerabilidad? Ponte en contacto directo con el administrador del sistema.
+            </p>
+        </section>
+
+        <section class="contenedor-contacto">
+            
+            <!-- REQUISITO DE LA RÚBRICA: Enlace MAILTO -->
+            <div class="caja-mailto">
+                <h3>Contacto Directo</h3>
+                <p>Para una respuesta inmediata sobre temas académicos, envíame un correo electrónico a través de tu cliente predeterminado:</p>
+                <a href="mailto:anguerreroal@uide.edu.ec" class="btn-primario">Redactar correo</a>
+            </div>
+
+            <hr class="divisor-contacto">
+
+            <!-- Formulario visual complementario -->
+            <div class="caja-formulario">
+                <h3 style="margin-bottom: 20px; color: var(--texto-titulos);">Enviar un ticket de soporte</h3>
+                <form action="#" method="get" class="formulario-soporte">
+                    
+                    <label for="nombreContacto">Nombre o Alias (ID):</label>
+                    <input type="text" id="nombreContacto" class="input-contacto" placeholder="Ej. sysadmin_01">
+
+                    <label for="asuntoContacto">Tipo de reporte:</label>
+                    <select id="asuntoContacto" class="input-contacto">
+                        <option>Consulta de Criptografía</option>
+                        <option>Reporte de Bug en el Simulador</option>
+                        <option>Duda General</option>
+                    </select>
+
+                    <label for="mensajeContacto">Detalle del mensaje:</label>
+                    <textarea id="mensajeContacto" class="input-contacto textarea-contacto" placeholder="Describe tu consulta con el mayor detalle técnico posible..."></textarea>
+
+                    <button type="submit" class="btn-secundario">Enviar Ticket</button>
+                </form>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA UNIFICADO -->
+    <footer class="pie-pagina-global">
+        <p>&copy; 2026 CyberHub Académico | Desarrollado por Andrés Guerrero. Diseñado para el estudio seguro de sistemas.</p>
+    </footer>
+
+</body>
+</html>

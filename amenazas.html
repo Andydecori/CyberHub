@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberHub | Amenazas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- CABECERA UNIFICADA -->
+    <header class="cabecera-global">
+        <nav class="navegacion-principal">
+            <div class="logo">
+                <strong>CyberHub_</strong>
+            </div>
+            <ul class="menu-enlaces">
+                <li><a href="index.html">Inicio</a></li>
+                <!-- Clase 'activo' en Amenazas -->
+                <li><a href="amenazas.html" class="activo">Amenazas</a></li>
+                <li><a href="laboratorio.html">Laboratorio</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor-principal">
+        
+        <section class="seccion-hero">
+            <h1 class="titulo-destacado">Vectores de Ataque Comunes</h1>
+            <p class="texto-hero">
+                Comprender cómo los atacantes explotan las debilidades en la arquitectura de red y el software es el primer paso para diseñar defensas robustas.
+            </p>
+        </section>
+
+        <section class="contenedor-amenazas">
+            
+            <!-- Amenaza 1: Sniffing -->
+            <article class="tarjeta-amenaza">
+                <div class="amenaza-imagen">
+                    <img src="imgs/captura-trafico.png" alt="Captura de tráfico de red mostrando credenciales no cifradas">
+                </div>
+                <div class="amenaza-texto">
+                    <h2>Interceptación de Tráfico (Sniffing)</h2>
+                    <p>La captura de paquetes en entornos de red virtualizados permite analizar los flujos de comunicación. Cuando protocolos como HTTP se utilizan sin cifrado (SSL/TLS), un atacante posicionado en la misma red puede interceptar el tráfico para extraer credenciales en texto plano, tal como se evidencia en la lectura de métodos POST.</p>
+                </div>
+            </article>
+
+            <!-- Amenaza 2: Escaneo de Puertos -->
+            <article class="tarjeta-amenaza invertida">
+                <div class="amenaza-texto">
+                    <h2>Auditoría y Explotación de Servidores</h2>
+                    <p>La fase de reconocimiento es crítica. Utilizando herramientas de recolección de información sobre distribuciones orientadas a la seguridad (ej. Kali Linux), es posible escanear infraestructuras objetivo, como servidores Ubuntu, para detectar puertos abiertos (22 SSH, 80 HTTP) y versiones de servicios desactualizados susceptibles a exploits conocidos.</p>
+                </div>
+                <div class="amenaza-imagen">
+                    <img src="imgs/escaneo-nmap.png" alt="Escaneo de puertos Nmap desde terminal">
+                </div>
+            </article>
+
+            <!-- Amenaza 3: Inyección SQL -->
+            <article class="tarjeta-amenaza">
+                <div class="amenaza-imagen">
+                    <img src="imgs/inyeccion-sql.png" alt="Ejecución exitosa de una inyección SQL">
+                </div>
+                <div class="amenaza-texto">
+                    <h2>Inyección SQL (SQLi)</h2>
+                    <p>Las fallas en la validación de los datos ingresados por el usuario permiten alterar la composición lógica de las consultas a las bases de datos relacionales. Al inyectar sentencias condicionales verdaderas (como: <code>' or '1'='1</code>), las restricciones de autenticación se evaden, forzando al motor a devolver registros privados y comprometiendo la integridad del sistema.</p>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA UNIFICADO -->
+    <footer class="pie-pagina-global">
+        <p>&copy; 2026 CyberHub Académico | Desarrollado por Andrés Guerrero. Diseñado para el estudio seguro de sistemas.</p>
+    </footer>
+
+</body>
+</html>
